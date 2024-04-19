@@ -1,0 +1,90 @@
+# Analyzing HTTP Log Files Using Splunk SIEM
+
+## Introduction
+HTTP (Hypertext Transfer Protocol) log files contain valuable information about web server activity, including requests, responses, user agents, and more. Analyzing HTTP logs using Splunk SIEM enables security professionals to monitor web traffic, detect anomalies, and identify potential security threats.
+
+## Project Overview
+In this project, we will upload sample HTTP log files to Splunk SIEM and perform various analyses to gain insights into web server activity within the network.
+
+## Prerequisites
+Before starting the project, ensure the following:
+- Splunk instance is installed and configured.
+- HTTP log data sources are configured to forward logs to Splunk.
+
+## Steps to Upload Sample HTTP Log Files to Splunk SIEM
+
+### 1. Prepare Sample HTTP Log Files
+- Obtain sample HTTP log files in a suitable format (e.g., text files).
+- Ensure the log files contain relevant HTTP events, including timestamps, request methods, URLs, response codes, user agents, etc.
+- Save the sample log files in a directory accessible by the Splunk instance.
+
+### 2. Upload Log Files to Splunk
+- Log in to the Splunk web interface.
+- Navigate to **Settings** > **Add Data**.
+- Select **Upload** as the data input method.
+
+### 3. Choose File
+- Click on **Select File** and choose the sample HTTP log file you prepared earlier.
+
+### 4. Set Source Type
+- In the **Set Source Type** section, specify the source type for the uploaded log file.
+- Choose the appropriate source type for HTTP logs (e.g., `access_combined` or a custom source type if applicable).
+
+### 5. Review Settings
+- Review other settings such as index, host, and sourcetype.
+- Ensure the settings are configured correctly to match the sample HTTP log file.
+
+### 6. Click Upload
+- Once all settings are configured, click on the **Review** button.
+- Review the settings one final time to ensure accuracy.
+- Click **Submit** to upload the sample HTTP log file to Splunk.
+
+### 7. Verify Upload
+- After uploading, navigate to the search bar in the Splunk interface.
+- Run a search query to verify that the uploaded HTTP events are visible.
+
+
+## Steps to Analyze FTP Log Files in Splunk SIEM
+
+### 1. Search for DNS Events   
+- Open Splunk interface and navigate to the search bar.
+- Enter the following search query to retrieve FTP events
+```
+index=<your_ftp_index> sourcetype=<your_ftp_sourcetype>
+```
+
+### 2.  Extract Relevant Fields
+- Identify key fields in FTP logs such as timestamps, source IP, username, commands, filenames, etc.
+- Use Splunk's field extraction capabilities or regular expressions to extract these fields for better analysis.
+- Example extraction command:
+```
+| rex field=_raw "<regex_pattern>"
+```
+
+### 3. Analyze File Transfer Activity
+- Determine the frequency and volume of file transfers.
+- Identify top users or IP addresses involved in file transfers.
+- Analyze the types of files being transferred (e.g., documents, executables, archives).
+- Use stats command to calculate statistics such as count, sum, avg, etc.
+
+### 4. Detect Anomalies
+- Look for unusual patterns in file transfer activity.
+- Analyze sudden spikes or drops in file transfer volume.
+- Investigate file transfers to or from suspicious IP addresses.
+- Use statistical analysis or machine learning models to detect anomalies.
+
+
+### 5. Monitor User Behavior
+- Monitor user behavior during file transfers.
+- Identify users with multiple failed login attempts or unauthorized access attempts.
+- Analyze user activity patterns and deviations from normal behavior.
+
+## Conclusion
+Analyzing FTP log files using Splunk SIEM provides valuable insights into file transfer activities within a network. By monitoring FTP events, detecting anomalies, and correlating with other logs, organizations can enhance their security posture and protect against various cyber threats.
+
+Feel free to customize these steps according to your specific use case and requirements. 
+
+Happy analyzing!
+
+
+
