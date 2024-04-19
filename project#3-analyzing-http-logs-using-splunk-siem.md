@@ -86,7 +86,7 @@ index=<your_http_index> sourcetype=<your_http_sourcetype>
 index=<your_http_index> sourcetype=<your_http_sourcetype>
 | timechart span=1h count by _time
 ```
-- Analyze sudden spikes or drops in file transfer volume.
+- Analyze high volumes of error responses:
 ```
 index=<your_http_index> sourcetype=<your_http_sourcetype>
 | stats count by status
