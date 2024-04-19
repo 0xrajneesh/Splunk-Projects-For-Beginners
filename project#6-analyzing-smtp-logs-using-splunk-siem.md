@@ -42,3 +42,6 @@ Before starting the project, ensure the following:
 ### 7. Verify Upload
 - After uploading, navigate to the search bar in the Splunk interface.
 - Run a search query to verify that the uploaded SMTP events are visible.
+
+Steps to Analyze SMTP Log Files in Splunk SIEM
+
