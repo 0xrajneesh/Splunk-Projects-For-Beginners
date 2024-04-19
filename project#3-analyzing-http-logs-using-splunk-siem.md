@@ -82,15 +82,36 @@ index=<your_http_index> sourcetype=<your_http_sourcetype>
 
 ### 4. Detect Anomalies
 - Look for unusual patterns in file transfer activity.
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| timechart span=1h count by _time
+```
 - Analyze sudden spikes or drops in file transfer volume.
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| stats count by status
+| where status >= 400
+```
 - Investigate file transfers to or from suspicious IP addresses.
-- Use statistical analysis or machine learning models to detect anomalies.
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| search src_ip="suspicious_ip"
+```
 
 
 ### 5. Monitor User Behavior
-- Monitor user behavior during file transfers.
-- Identify users with multiple failed login attempts or unauthorized access attempts.
-- Analyze user activity patterns and deviations from normal behavior.
+- Identify users with multiple failed login attempts or unauthorized access attempts:
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| search action="login" status="failed"
+| stats count by user
+```
+- Analyze user session durations and access patterns:
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| stats range(_time) as session_duration by session_id
+| stats avg(session_duration) as avg_session_duration by user
+```
 
 ## Conclusion
 Analyzing FTP log files using Splunk SIEM provides valuable insights into file transfer activities within a network. By monitoring FTP events, detecting anomalies, and correlating with other logs, organizations can enhance their security posture and protect against various cyber threats.
