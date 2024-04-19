@@ -44,28 +44,41 @@ Before starting the project, ensure the following:
 - Run a search query to verify that the uploaded HTTP events are visible.
 
 
-## Steps to Analyze FTP Log Files in Splunk SIEM
+## Steps to Analyze HTTP Log Files in Splunk SIEM
 
-### 1. Search for DNS Events   
+
+### 1. Search for HTTP Events
 - Open Splunk interface and navigate to the search bar.
-- Enter the following search query to retrieve FTP events
+- Enter the following search query to retrieve HTTP events:
 ```
-index=<your_ftp_index> sourcetype=<your_ftp_sourcetype>
+index=<your_http_index> sourcetype=<your_http_sourcetype>
 ```
 
-### 2.  Extract Relevant Fields
-- Identify key fields in FTP logs such as timestamps, source IP, username, commands, filenames, etc.
+### 2. Extract Relevant Fields
+- Identify key fields in HTTP logs such as timestamps, request methods, URLs, response codes, user agents, etc.
 - Use Splunk's field extraction capabilities or regular expressions to extract these fields for better analysis.
 - Example extraction command:
 ```
 | rex field=_raw "<regex_pattern>"
+
 ```
 
-### 3. Analyze File Transfer Activity
-- Determine the frequency and volume of file transfers.
-- Identify top users or IP addresses involved in file transfers.
-- Analyze the types of files being transferred (e.g., documents, executables, archives).
-- Use stats command to calculate statistics such as count, sum, avg, etc.
+### 3. Analyze Web Traffic Patterns
+- Determine the distribution of request methods (GET, POST, etc.) to understand web traffic patterns.
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| stats count by method
+```
+- Identify top URLs or endpoints accessed by users.
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| top limit=10 uri
+```
+- Analyze response codes to identify errors or successful requests.
+```
+index=<your_http_index> sourcetype=<your_http_sourcetype>
+| stats count by status
+```
 
 ### 4. Detect Anomalies
 - Look for unusual patterns in file transfer activity.
