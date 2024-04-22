@@ -4,7 +4,7 @@ This repository contains a collection of projects for analyzing various types of
 
 ## Projects
 
-1. ![Analyzing DNS Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/Project%231-analyzing-dns-log-using%20splunk-siem.md)
+1. [Analyzing DNS Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/Project%231-analyzing-dns-log-using%20splunk-siem.md)
 2. [Analyzing FTP Logs Using Splunk SIEM](#analyzing-ftp-logs-using-splunk-siem)
 3. [Analyzing HTTP Logs Using Splunk SIEM](#analyzing-http-logs-using-splunk-siem)
 4. [Analyzing SSH Logs Using Splunk SIEM](#analyzing-ssh-logs-using-splunk-siem)
