@@ -4,13 +4,13 @@ This repository contains a collection of projects for analyzing various types of
 
 ## Projects
 
-1. [Analyzing DNS Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/Project%231-analyzing-dns-log-using%20splunk-siem.md)
-2. [Analyzing FTP Logs Using Splunk SIEM](#analyzing-ftp-logs-using-splunk-siem)
-3. [Analyzing HTTP Logs Using Splunk SIEM](#analyzing-http-logs-using-splunk-siem)
-4. [Analyzing SSH Logs Using Splunk SIEM](#analyzing-ssh-logs-using-splunk-siem)
-5. [Analyzing Tunnel Logs Using Splunk SIEM](#analyzing-tunnel-logs-using-splunk-siem)
-6. [Analyzing SMTP Logs Using Splunk SIEM](#analyzing-smtp-logs-using-splunk-siem)
-7. [Analyzing DHCP Logs Using Splunk SIEM](#analyzing-dhcp-logs-using-splunk-siem)
+1. [Analyzing DNS Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/Project%231-analyzing-dns-log-using%20splunk-siem.md): This project provides a step-by-step guide for analyzing DNS (Domain Name System) log files using Splunk SIEM. It covers uploading sample log files, extracting relevant fields, analyzing DNS query patterns, detecting anomalies, and monitoring DNS traffic.
+2. [Analyzing FTP Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/project%232-analyzing-ftp-logs-using-splunk-siem.md): This project guides you through analyzing FTP (File Transfer Protocol) log files using Splunk SIEM. It includes steps for uploading sample log files, extracting fields, analyzing FTP activity patterns, detecting anomalies, and monitoring FTP traffic.
+3. [Analyzing HTTP Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/project%233-analyzing-http-logs-using-splunk-siem.md)
+4. [Analyzing SSH Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/project%234-analyzing-ssh-logs-using-splunk-siem.md)
+5. [Analyzing Tunnel Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/project%235-analyzing-tunnel-logs-using-splunk-siem.md)
+6. [Analyzing SMTP Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/project%236-analyzing-smtp-logs-using-splunk-siem.md)
+7. [Analyzing DHCP Logs Using Splunk SIEM](https://github.com/0xrajneesh/Splunk-Projects-For-Beginners/blob/main/project%237-analyzing-dhcp-logs-using-splunk-siem.md)
 
 ## Analyzing DNS Logs Using Splunk SIEM
 
