@@ -14,7 +14,7 @@ Before starting the project, ensure the following:
 ## Steps to Upload Sample FTP Log Files to Splunk SIEM
 
 ### 1. Prepare Sample FTP Log Files
-- Obtain sample FTP log files in a suitable format (e.g., text files).
+- Obtain sample [FTP log files](https://www.secrepo.com/maccdc2012/ftp.log.gz) in a suitable format (e.g., text files).
 - Ensure the log files contain relevant FTP events, including timestamps, source IP, username, commands, filenames, etc.
 - Save the sample log files in a directory accessible by the Splunk instance.
 
