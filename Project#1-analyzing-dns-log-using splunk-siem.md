@@ -50,7 +50,7 @@ Before analyzing DNS logs in Splunk, ensure the following:
 - Open Splunk interface and navigate to the search bar.   
 - Enter the following search query to retrieve DNS events   
 ```
-index=<your_dns_index> sourcetype=<your_dns_sourcetype>
+index=* sourcetype=dns_sample
 ```
 
 ### 2. Extract Relevant Fields
@@ -70,10 +70,9 @@ index=<your_dns_index> sourcetype=<your_dns_sourcetype>
 
 ### 4. Identify Anomalies
 - Look for unusual patterns or anomalies in DNS activity.
-- Analyze spikes in DNS queries, uncommon query types, or excessive failed queries.
 - Example query to identify spikes
 ```
-| timechart count by query_type
+index=_* OR index=* sourcetype=dns_sample  | stats count by fqdn
 ```
 
 ### 5. Investigate Suspicious Domains
@@ -81,7 +80,7 @@ index=<your_dns_index> sourcetype=<your_dns_sourcetype>
 - Utilize threat intelligence feeds or reputation databases to identify malicious domains such virustotal.com
 - Example search for known malicious domains:
 ```
-| search domain_name="malicious_domain.com"
+index=* sourcetype=dns_sample fqdn="maliciousdomain.com"
 ```
 
 ## Conclusion
