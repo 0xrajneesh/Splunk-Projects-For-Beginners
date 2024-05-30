@@ -46,7 +46,7 @@ Before starting the project, ensure the following:
 
 ## Steps to Analyze FTP Log Files in Splunk SIEM
 
-### 1. Search for DNS Events   
+### 1. Search for FTP Events   
 - Open Splunk interface and navigate to the search bar.
 - Enter the following search query to retrieve FTP events
 ```
@@ -58,8 +58,19 @@ index=<your_ftp_index> sourcetype=<your_ftp_sourcetype>
 - Use Splunk's field extraction capabilities or regular expressions to extract these fields for better analysis.
 - Example extraction command:
 ```
-| rex field=_raw "<regex_pattern>"
+| rex field=_raw "^(?<timestamp>\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}).*?(?<source_ip>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?(?<username>\w+).*?(?<command>[A-Z]+).*?(?<file_path>\/[\w\/.-]+)
+"
 ```
+Explanation:
+
+^: Start of the line.
+(?<timestamp>\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}): Matches and captures the timestamp in the format "YYYY-MM-DD HH:MM
+".
+.*?: Matches any character (except for line terminators) as few times as possible.
+(?<source_ip>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}): Matches and captures the source IP address.
+(?<username>\w+): Matches and captures the username (assuming it consists of alphanumeric characters).
+(?<command>[A-Z]+): Matches and captures the FTP command (assuming it consists of uppercase letters).
+(?<file_path>\/[\w\/.-]+): Matches and captures the file path (assuming it starts with "/" and can contain alphanumeric characters, "/", ".", and "-").
 
 ### 3. Analyze File Transfer Activity
 - Determine the frequency and volume of file transfers.
