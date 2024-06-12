@@ -14,7 +14,7 @@ Before starting the project, ensure the following:
 ## Steps to Upload Sample DHCP Log Files to Splunk SIEM
 
 ### 1. Prepare Sample DHCP Log Files
-- Obtain sample DHCP log files in a suitable format (e.g., text files).
+- Obtain sample [DHCP log files](https://www.secrepo.com/maccdc2012/dhcp.log.gz) in a suitable format.
 - Ensure the log files contain relevant DHCP events, including timestamps, IP address assignments, lease durations, client identifiers, etc.
 - Save the sample log files in a directory accessible by the Splunk instance.
 
