@@ -14,7 +14,7 @@ Before starting the project, ensure the following:
 ## Steps to Upload Sample SSH Log Files to Splunk SIEM
 
 ### 1. Prepare Sample SSH Log Files
-- Obtain sample SSH log files in a suitable format (e.g., text files).
+- Obtain sample [SSH log files](https://www.secrepo.com/maccdc2012/ssh.log.gz) in a suitable format (e.g., text files).
 - Ensure the log files contain relevant SSH events, including timestamps, source IP addresses, usernames, actions (login, logout), etc.
 - Save the sample log files in a directory accessible by the Splunk instance.
 
