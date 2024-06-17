@@ -14,7 +14,7 @@ Before starting the project, ensure the following:
 ## Steps to Upload Sample SMTP Log Files to Splunk SIEM
 
 ### 1. Prepare Sample SMTP Log Files
-- Obtain sample SMTP log files in a suitable format (e.g., text files).
+- Obtain sample [SMTP log file](https://www.secrepo.com/maccdc2012/smtp.log.gz) in a suitable format (e.g., text files).
 - Ensure the log files contain relevant SMTP events, including timestamps, sender and recipient addresses, email subjects, etc.
 - Save the sample log files in a directory accessible by the Splunk instance.
 
