@@ -14,7 +14,7 @@ Before starting the project, ensure the following:
 ## Steps to Upload Sample HTTP Log Files to Splunk SIEM
 
 ### 1. Prepare Sample HTTP Log Files
-- Obtain sample HTTP log files in a suitable format (e.g., text files).
+- Obtain sample [HTTP log files](https://www.secrepo.com/maccdc2012/http.log.gz) in a suitable format (e.g., text files).
 - Ensure the log files contain relevant HTTP events, including timestamps, request methods, URLs, response codes, user agents, etc.
 - Save the sample log files in a directory accessible by the Splunk instance.
 
