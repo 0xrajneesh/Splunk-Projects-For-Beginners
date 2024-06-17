@@ -14,7 +14,7 @@ Before starting the project, ensure the following:
 ## Steps to Upload Sample Tunnel Log Traffic from Zeek IDS to Splunk SIEM
 
 ### 1. Prepare Sample Tunnel Log Files
-- Obtain sample tunnel log files from Zeek IDS in a suitable format (e.g., text files).
+- Obtain sample [tunnel log files](https://www.secrepo.com/maccdc2012/tunnel.log.gz) from Zeek IDS in a suitable format (e.g., text files).
 - Ensure the log files contain relevant tunneling events, including timestamps, source and destination IP addresses, tunneling protocols, etc.
 - Save the sample log files in a directory accessible by the Splunk instance.
 
